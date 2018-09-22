@@ -1,0 +1,15 @@
+.option {
+    width: 120px;
+    height: 30px;
+    padding: 0px 15px 0px 15px;
+    color: #726659;
+    border: solid 1px #b3aca7;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  input:hover, a:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+  }

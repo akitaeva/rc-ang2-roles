@@ -1,3 +1,13 @@
-<p>
-  roles-assignment works!
-</p>
+<h2>Assign Permissions</h2>
+ 
+ <div id="options">
+ <checkbox-group [options]="availableRoles" (toggle)="onRolesChange($event)" (edit)="getUser($event)"></checkbox-group>
+ </div>
+ 
+ <button (click)="editUserInfo">Back</button>
+ <button (click)="redirect()">Cancel</button>
+ <button (click)="review()">Next</button>
+
+<div *ngIf="theError">
+    Error: {{theError}}
+</div>

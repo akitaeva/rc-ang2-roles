@@ -1,3 +1,3 @@
-<p>
-  checkbox-group works!
-</p>
+<div class="option" *ngFor="let item of options">
+    <input type="checkbox" [(ngModel)]="item.checked" (change)="onToggle()">{{item.label}}
+</div>

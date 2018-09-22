@@ -1,0 +1,29 @@
+h5 {
+  font-size: 0.975em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+}
+button {
+    position: relative;  
+    width: 130px;
+    padding: 10px;
+    margin: 10px auto 15px auto;
+   
+    font-size: 0.975em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b3aca7;
+    background-color: #fffaf7;
+    outline:none;
+    cursor: pointer;
+    border: solid 1px #b3aca7;
+    border-top: none;
+    border-left: none;
+  }
+
+  button:hover {
+    color: #e2dedb;
+    background: #b3aca7;
+    
+  }

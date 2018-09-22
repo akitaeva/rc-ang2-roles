@@ -2,6 +2,7 @@ h1 {
     position: relative;
     margin: 100px 0 25px 0;
     font-size: 4.3em;
+    font-weight: 100;
     text-align: center;
     letter-spacing: 12px;
     text-transform: uppercase;
@@ -17,7 +18,7 @@ h1 {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: #b3aca7;
-    
+    background-color: #fffaf7;
     outline:none;
     cursor: pointer;
     border: solid 1px #b3aca7;

@@ -21,10 +21,22 @@ export class NewUserComponent implements OnInit {
   constructor(private myRouter: Router) { }
 
   redirect() {
-    this.myRouter.navigate(['./']);
+    if (window.confirm("Do you really want to leave and loose all new user data?")) { 
+      this.myRouter.navigate(['./']);
+    }
   }
+
+  firstPhase(userInfo){
+    console.log('userinfo: ', userInfo)
+    this.registerUser = userInfo;
+    newUser = this.registerUser;
+    this.myRouter.navigate(["/assigned-roles"]);
+  }
+  
 
   ngOnInit() {
   }
 
 }
+
+export let newUser;

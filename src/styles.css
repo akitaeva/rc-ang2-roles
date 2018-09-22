@@ -4,3 +4,12 @@ body {
     background: #e2dedb;
     color: #b3aca7;
   }
+
+h2 {
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }

@@ -7,7 +7,6 @@ import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CheckboxGroupComponent } from './components/checkbox-group/checkbox-group.component';
-import { CheckboxItemComponent } from './components/checkbox-item/checkbox-item.component';
 import { RolesAssignmentComponent } from './components/roles-assignment/roles-assignment.component';
 import { ReviewComponent } from './components/review/review.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
@@ -44,7 +43,6 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     CheckboxGroupComponent,
-    CheckboxItemComponent,
     RolesAssignmentComponent,
     ReviewComponent,
     NewUserComponent
