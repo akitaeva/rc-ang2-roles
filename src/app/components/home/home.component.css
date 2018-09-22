@@ -1,0 +1,32 @@
+h1 {
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 4.3em;
+    text-align: center;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+  }
+
+  button {
+    position: relative;  
+    width: 502px;
+    padding: 10px;
+    margin: 10px auto 15px auto;
+   
+    font-size: 0.975em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b3aca7;
+    
+    outline:none;
+    cursor: pointer;
+    border: solid 1px #b3aca7;
+    border-top: none;
+    border-left: none;
+  }
+
+  button:hover {
+    color: #e2dedb;
+    background: #b3aca7;
+    
+  }

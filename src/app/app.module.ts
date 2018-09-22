@@ -24,6 +24,19 @@ const routes: Routes = [
     path:'',
     component:HomeComponent
   },  
+  {
+    path:'newuser',
+    component:NewUserComponent
+  },  
+  {
+    path:'assigned-roles',
+    component:RolesAssignmentComponent
+  },
+  {
+    path:'review',
+    component:ReviewComponent
+  },
+
 ]
 
 @NgModule({

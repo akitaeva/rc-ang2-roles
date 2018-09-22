@@ -9,8 +9,18 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  deadEnd = "Something else is a part of the different challange"
+
   constructor( private myAuth:AuthService,
               private myRouter: Router) { }
+
+  alert() {
+    window.alert(this.deadEnd);
+  }     
+  
+  redirect() {
+    this.myRouter.navigate(['./newuser']);
+  }
 
   ngOnInit() {
   }
