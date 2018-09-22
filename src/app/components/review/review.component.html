@@ -7,10 +7,10 @@
      <h5>Email: <span>{{theUser.email}}</span></h5>
    </div>
   
-    <h5>Roles:</h5>
-      <!-- <div class="userRole"  *ngFor="let role of registerUser.roles">
-        <span [(ngModel)]="registerUser.roles"> </span>
-      </div>   -->
+  <h5>Roles:</h5>
+    <div class="userRole" *ngFor="let roleName of userRoles">
+        <span>{{roleName}}</span>
+    </div>  
      
    
 

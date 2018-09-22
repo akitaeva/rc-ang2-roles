@@ -15,6 +15,7 @@ export class ReviewComponent implements OnInit {
   
   allAvailRoles:any;
   errorMessage: string;
+  userRoles:any;
 
   constructor(private authService: AuthService,
     private http: Http,
@@ -61,10 +62,28 @@ export class ReviewComponent implements OnInit {
   } // close saveToDB()
   
 
+  getRoleNames(userRoles) {
+    let roleNames = [];
+    userRoles.forEach(oneRole => {
+      for(let i=0; i< this.allAvailRoles.length; i++ ){
+        if(oneRole === this.allAvailRoles[i].roleId){
+          console.log("inside the filtering loop ", this.allAvailRoles[i].name)
+          roleNames.push(this.allAvailRoles[i].name)
+          return roleNames
+        }
+      }
+    })
+    console.log("the array of role names: ", roleNames);
+    return roleNames;
+
+
+  }
+
   ngOnInit() {
-    // console.log("review ONLOAD user object: ", this.theUser);
     this.allAvailRoles = this.authService.getRoles()
-    console.log("review ONLOAD all roles: ", this.allAvailRoles);
+    this.userRoles = this.getRoleNames(this.theUser.roles);
+    
+    console.log("review ONLOAD all selected USER roles: ", this.userRoles);
 
   }
 
