@@ -1,12 +1,11 @@
 .option {
-    width: 120px;
+    width: 502px;
     height: 30px;
     padding: 0px 15px 0px 15px;
     color: #726659;
-    border: solid 1px #b3aca7;
-    border-bottom: none;
     display: flex;
-    justify-content: space-around;
+    border-bottom: solid 1px #b3aca7;
+    justify-content: flex-start;
   }
   
   input:hover, a:hover {

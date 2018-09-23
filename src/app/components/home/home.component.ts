@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  deadEnd = "Something else is a part of the different challange"
+  deadEnd = "Something else is not a part of this challange"
 
   constructor( private myAuth:AuthService,
               private myRouter: Router) { }

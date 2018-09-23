@@ -24,7 +24,7 @@ export class RolesAssignmentComponent implements OnInit {
 
   review(){
     registerUser = this.newUser;
-    console.log('newUser -----hey hey hey: ', newUser)  
+    console.log('newUser in review function: ', newUser)  
     this.myRouter.navigate(["/review"]);
     }
   
@@ -34,7 +34,7 @@ export class RolesAssignmentComponent implements OnInit {
 
   //redirecting "home" on "cancel" of data entry 
   redirect() {
-    if (window.confirm("Do you really want to leave and loose all new user data?")) { 
+    if (window.confirm("Do you want to leave this page and lose all new user data?")) { 
       this.myRouter.navigate(['./']);
     }
       

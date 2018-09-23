@@ -34,7 +34,7 @@ export class ReviewComponent implements OnInit {
   }
 
   redirect() {
-    if (window.confirm("Do you really want to leave and loose all new user data?")) { 
+    if (window.confirm("Do you want to leave this page and lose all new user data?")) { 
       this.myRouter.navigate(['./']);
     }
   }
@@ -62,6 +62,7 @@ export class ReviewComponent implements OnInit {
   } // close saveToDB()
   
 
+  //getting the role names according to the roleIDs 
   getRoleNames(userRoles) {
     let roleNames = [];
     userRoles.forEach(oneRole => {

@@ -1,24 +1,26 @@
+<h2>User Info Summary</h2>
+ 
  <div id="userInfoSummary">
   
-  <h2>User Info Summary</h2>
-   <div>
-     <h5>First Name:<span>{{theUser.firstName}}</span></h5>
-     <h5>Last Name: <span>{{theUser.lastName}}</span></h5>
-     <h5>Email: <span>{{theUser.email}}</span></h5>
-   </div>
-  
-  <h5>Roles:</h5>
-    <div class="userRole" *ngFor="let roleName of userRoles">
-        <span>{{roleName}}</span>
-    </div>  
-     
-   
-
+    <div class="keyValuePair bottomBorder">
+        <h5>First Name:</h5><span>{{theUser.firstName}}</span>
+     </div>
+     <div class="keyValuePair bottomBorder">
+        <h5>Last Name:</h5><span>{{theUser.lastName}}</span>
+     </div>
+     <div class="keyValuePair bottomBorder">
+        <h5>Email:</h5><span>{{theUser.email}}</span>
+     </div>
+    <div class="keyValuePair">
+        <h5>Roles:</h5>
+    </div> 
+  <div class="userRole" *ngFor="let roleName of userRoles">
+          <p>{{roleName}}</p>
+  </div>  
+ 
  </div>  <!--End of userInfoSummary div -->
  
  <button (click)="editUserInfo()">Edit User Info</button>
-
-
  <button (click)="editUserRoles()">Edit User Roles</button>
 
 

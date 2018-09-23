@@ -2,14 +2,43 @@ h5 {
   font-size: 0.975em;
   letter-spacing: 3px;
   text-transform: uppercase;
-
 }
+span {
+  color: #827d7a;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+p {
+  color: #827d7a;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.keyValuePair {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.bottomBorder {
+  border-bottom: solid 1px #b3aca7;
+}
+
+#userInfoSummary{
+  position: relative;  
+  width: 500px;
+  margin: 10px auto 15px auto;
+  padding: 10px;
+  border: solid 1px #b3aca7;
+}
+
 button {
     position: relative;  
-    width: 130px;
+    width: 200px;
     padding: 10px;
     margin: 10px auto 15px auto;
-   
     font-size: 0.975em;
     letter-spacing: 3px;
     text-transform: uppercase;

@@ -1,17 +1,19 @@
-#options {
+#roles {
     position: relative;  
-    width: 502px;
+    width: 515px;
     padding: 10px;
+    margin: 20px auto 0px auto;
+    border: solid 1px #b3aca7;
+    border-bottom: none;
     display: flex;
     justify-content: center;
 }
 
-
 button {
     position: relative;  
-    width: 200px;
+    width: 179px;
     padding: 10px;
-    margin: 10px auto 15px auto;
+    margin: -10px auto 15px auto;
     font-size: 0.975em;
     letter-spacing: 2px;
     text-transform: uppercase;

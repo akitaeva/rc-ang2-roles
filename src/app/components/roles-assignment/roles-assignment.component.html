@@ -1,8 +1,8 @@
 <h2>Assign Permissions</h2>
  
- <div id="options">
+<div id="roles">
  <checkbox-group [options]="availableRoles" (toggle)="onRolesChange($event)" (edit)="getUser($event)"></checkbox-group>
- </div>
+</div>
  
  <button (click)="editUserInfo">Back</button>
  <button (click)="redirect()">Cancel</button>
