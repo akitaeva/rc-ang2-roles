@@ -59,6 +59,7 @@ export class ReviewComponent implements OnInit {
         const parsedError = err.json();
         this.errorMessage = parsedError.message + " =/";
       });
+      window.alert("The user data has been saved on the server!")
       this.myRouter.navigate(['./']);
   } // close saveToDB()
   

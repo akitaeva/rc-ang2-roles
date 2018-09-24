@@ -48,8 +48,6 @@ export class RolesAssignmentComponent implements OnInit {
 
 
   ngOnInit() {
-    const blah = this.authService.getRoles();
-    console.log('blah blah blah: ', blah) 
     setTimeout(() => {
     this.availableRoles = this.authService.getRoles()
     .map(res => { 

@@ -34,13 +34,17 @@ export class AuthService {
 
 // Get the list of roles from the server
   getRoles() {
-    const blah = this.myHttp.get('http://demo1224749.mockable.io/roles')
-    .map((res) => res.json());
-    console.log('blah blah blah in SERVICE : ', blah) 
-    // return this.roles;
-    return this.myHttp.get('http://demo1224749.mockable.io/roles.json')
-      .map((res) => res.json());
-      // .catchError(this.handleError);
+
+ //this is the hardcoded version of the role options:   
+    return this.roles;
+
+  //this would be my approach to getting it from an API, but the data's format from this link
+  // is giving me trouble; (normally the response would be an array of ojects = [{}, {}, {}], 
+  // but here it's anobject with the nested array declaration?). 
+
+    // return this.myHttp.get('http://demo1224749.mockable.io/roles')
+    //   .map((res) => res.json());
+    // .catchError(this.handleError);
   }
 
 }
