@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { newUser } from '../new-user/new-user.component'
+import { newUser } from '../new-user/new-user.component';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { Http } from '@angular/http';
+
 
 @Component({
   selector: 'app-roles-assignment',
@@ -18,7 +18,6 @@ export class RolesAssignmentComponent implements OnInit {
   
 
   constructor(private authService: AuthService,
-    private http: Http,
     private myRouter: Router) { }
 
 
@@ -29,7 +28,7 @@ export class RolesAssignmentComponent implements OnInit {
     }
   
   editingUserInfo(){
-  
+    this.myRouter.navigate(['./newuser']);
   }
 
   //redirecting "home" on "cancel" of data entry 
@@ -43,18 +42,23 @@ export class RolesAssignmentComponent implements OnInit {
   //saving roles input into the user object
   onRolesChange(value) {
     this.newUser.roles = value;
-    registerUser = this.newUser;
+    registerUser = this.newUser; //saving the state into the object to pass on
     console.log('User roles:' , registerUser.roles);
    } 
 
 
-  ngOnInit(): void {
+  ngOnInit() {
+    const blah = this.authService.getRoles();
+    console.log('blah blah blah: ', blah) 
     setTimeout(() => {
     this.availableRoles = this.authService.getRoles()
     .map(res => { 
       this.tempRoles = res;
       return new CheckboxItem(this.tempRoles.roleId, this.tempRoles.name)});
     }, 100);
+  //  if (this.newUser.roles) {
+
+  //  }
    console.log("availableRoles:  ",  this.availableRoles)
   }
 

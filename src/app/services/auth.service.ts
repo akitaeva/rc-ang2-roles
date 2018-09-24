@@ -31,12 +31,16 @@ export class AuthService {
   }
 
 
-  getRoles() {
 
-    return this.roles;
-    // return this.http.get('http://demo1224749.mockable.io/roles')
-    //   .map((res) => res.json())
-    //   .catchError(this.handleError);
+// Get the list of roles from the server
+  getRoles() {
+    const blah = this.myHttp.get('http://demo1224749.mockable.io/roles')
+    .map((res) => res.json());
+    console.log('blah blah blah in SERVICE : ', blah) 
+    // return this.roles;
+    return this.myHttp.get('http://demo1224749.mockable.io/roles.json')
+      .map((res) => res.json());
+      // .catchError(this.handleError);
   }
 
 }

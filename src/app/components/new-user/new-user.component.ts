@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { userToEdit } from '../review/review.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-user.component.css']
 })
 export class NewUserComponent implements OnInit {
-
+@Input() userInfoToChange = userToEdit;
 
   registerUser:any = {
     firstName: '',
@@ -20,21 +21,30 @@ export class NewUserComponent implements OnInit {
 
   constructor(private myRouter: Router) { }
 
+
+//Go back to the homepage  
   redirect() {
-    if (window.confirm("Do you want to leave this page and lose all new user data?")) { 
+    if (window.confirm("Do you want to leave this page?")) {
       this.myRouter.navigate(['./']);
     }
   }
 
+//Get the form input and move to assigning roles
   firstPhase(userInfo){
     console.log('userinfo: ', userInfo)
-    this.registerUser = userInfo;
-    newUser = this.registerUser;
+    this.registerUser = userInfo; 
+    //Save the state of the object to pass to the next component
+    newUser = this.registerUser; 
     this.myRouter.navigate(["/assigned-roles"]);
   }
   
 
   ngOnInit() {
+ //Prefill the form fileds if the user is being edited (not created)   
+    if (this.userInfoToChange) {
+          this.registerUser = this.userInfoToChange;
+        }
+
   }
 
 }

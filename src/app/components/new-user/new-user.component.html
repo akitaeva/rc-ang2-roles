@@ -4,12 +4,13 @@
 <form (submit)="firstPhase(registerUser)">
     
     <input [(ngModel)]="registerUser.firstName" id="firtsName" name="firtsName" type="text" placeholder="FIRST NAME" required>
-    <!-- value="{{}}"  -->
+  
     <input [(ngModel)]="registerUser.lastName"  id="lastName" name="lastName" type="text" placeholder="LAST NAME" required>
 
-    <input [(ngModel)]="registerUser.email"  name="email" type="email" placeholder="EMAIL"required>
+    <input [(ngModel)]="registerUser.email"  name="email" type="email" placeholder="EMAIL" required>
 
     <input id="submit" type="submit" value="NEXT">
+    
     <a (click)="redirect()">Cancel</a>
 
 </form>

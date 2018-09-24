@@ -27,11 +27,11 @@ export class ReviewComponent implements OnInit {
     this.myRouter.navigate(['./newuser']);
   }
 
-  editUserRoles() {
-    userToEdit = this.theUser;
-    console.log("this is the user object passed back to assign-roles view: ", userToEdit)
-    this.myRouter.navigate(['./assigned-roles']);
-  }
+  // editUserRoles() {
+  //   userToEdit = this.theUser;
+  //   console.log("this is the user object passed back to assign-roles view: ", userToEdit)
+  //   this.myRouter.navigate(['./assigned-roles']);
+  // }
 
   redirect() {
     if (window.confirm("Do you want to leave this page and lose all new user data?")) { 
@@ -59,6 +59,7 @@ export class ReviewComponent implements OnInit {
         const parsedError = err.json();
         this.errorMessage = parsedError.message + " =/";
       });
+      this.myRouter.navigate(['./']);
   } // close saveToDB()
   
 
