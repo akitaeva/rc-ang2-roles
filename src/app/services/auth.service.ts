@@ -40,7 +40,7 @@ export class AuthService {
 
   //this would be my approach to getting it from an API, but the data's format from this link
   // is giving me trouble; (normally the response would be an array of ojects = [{}, {}, {}], 
-  // but here it's anobject with the nested array declaration?). 
+  // but here it's an object with the nested array declaration ? ). 
 
     // return this.myHttp.get('http://demo1224749.mockable.io/roles')
     //   .map((res) => res.json());

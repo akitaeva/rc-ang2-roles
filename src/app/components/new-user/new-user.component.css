@@ -67,8 +67,8 @@ form {
   }
   
   input:invalid {
-    border-left: 1px solid palevioletred;
-    border-right: 1px solid palevioletred;
+    border-left: 2px solid palevioletred;
+    border-right: 2px solid palevioletred;
   }
   
   input:valid {

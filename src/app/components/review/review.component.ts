@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Http } from '@angular/http';
 import { AuthService } from '../../services/auth.service';
 import { registerUser } from '../roles-assignment/roles-assignment.component';
 
@@ -18,9 +17,9 @@ export class ReviewComponent implements OnInit {
   userRoles:any;
 
   constructor(private authService: AuthService,
-    private http: Http,
     private myRouter: Router) { }
 
+  //go back to the "new user" view with the newest state of the object
   editUserInfo() {
     userToEdit = this.theUser;
     console.log("this is the user object passed back to new-user view: ", userToEdit)

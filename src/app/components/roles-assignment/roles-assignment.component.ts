@@ -22,11 +22,11 @@ export class RolesAssignmentComponent implements OnInit {
 
 
   review(){
-    registerUser = this.newUser;
-    console.log('newUser in review function: ', newUser)  
+    registerUser = this.newUser; 
     this.myRouter.navigate(["/review"]);
     }
   
+//navigating to the new user info
   editingUserInfo(){
     this.myRouter.navigate(['./newuser']);
   }
@@ -43,7 +43,7 @@ export class RolesAssignmentComponent implements OnInit {
   onRolesChange(value) {
     this.newUser.roles = value;
     registerUser = this.newUser; //saving the state into the object to pass on
-    console.log('User roles:' , registerUser.roles);
+
    } 
 
 
@@ -54,10 +54,6 @@ export class RolesAssignmentComponent implements OnInit {
       this.tempRoles = res;
       return new CheckboxItem(this.tempRoles.roleId, this.tempRoles.name)});
     }, 100);
-  //  if (this.newUser.roles) {
-
-  //  }
-   console.log("availableRoles:  ",  this.availableRoles)
   }
 
 
