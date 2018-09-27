@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { userToEdit } from '../review/review.component';
+import { User } from '../user.model'
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,15 +8,11 @@ import { Router } from '@angular/router';
   templateUrl: './new-user.component.html',
   styleUrls: ['./new-user.component.css']
 })
-export class NewUserComponent implements OnInit {
+export class NewUserComponent implements OnInit, OnDestroy {
 @Input() userInfoToChange = userToEdit;
+@Input('user') user: User;
 
-  registerUser:any = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    roles: []
-  };
+  registerUser = new User;
 
   theError:any;
 
@@ -45,6 +42,11 @@ export class NewUserComponent implements OnInit {
           this.registerUser = this.userInfoToChange;
         }
 
+  }
+
+  ngOnDestroy() {
+    this.registerUser = null;
+    this.userInfoToChange = null;
   }
 
 }
